@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV – Denis Hodzic</title>
+<style>
+  :root{
+    --ink:#14202e;        /* sidebar / dark */
+    --ink-2:#1d2d40;
+    --brand:#12a4a4;      /* teal accent */
+    --brand-d:#0d7d7d;
+    --paper:#ffffff;
+    --muted:#5b6a7a;
+    --line:#e3e8ee;
+    --side-w:35%;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#8a97a6}
+  body{
+    font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+    color:#1f2b38;font-size:9.6px;line-height:1.42;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;
+  }
+  a{color:inherit;text-decoration:none}
+
+  /* A4 sheet with a left dark stripe that survives page breaks */
+  .page{
+    width:210mm;min-height:auto;margin:12px auto;
+    background:linear-gradient(90deg,var(--ink) 0 var(--side-w),var(--paper) var(--side-w) 100%);
+    box-shadow:0 6px 30px rgba(0,0,0,.25);
+    display:grid;grid-template-columns:var(--side-w) 1fr;
+  }
+
+  /* ---------- SIDEBAR ---------- */
+  .side{color:#dfe7ef;padding:26px 20px 26px 24px}
+  .side .name{color:#fff;font-size:21px;font-weight:800;line-height:1.1;letter-spacing:.3px}
+  .side .name b{color:var(--brand)}
+  .side .role{color:var(--brand);font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:2.2px;margin-top:5px}
+  .s-block{margin-top:20px}
+  .s-title{color:#fff;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;
+           padding-bottom:5px;margin-bottom:9px;border-bottom:1.5px solid rgba(255,255,255,.22)}
+  .contact-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:6px;color:#cdd8e3;line-height:1.35}
+  .contact-row .ic{color:var(--brand);width:12px;flex:0 0 12px;text-align:center;padding-top:1px}
+  .contact-row a{word-break:break-word}
+
+  .skill{margin-bottom:8px}
+  .skill .lab{display:flex;justify-content:space-between;color:#e6edf4;margin-bottom:3px}
+  .skill .lab span:last-child{color:#9fb0c1;font-size:8.6px;font-style:italic}
+  .bar{height:5px;background:rgba(255,255,255,.14);border-radius:4px;overflow:hidden}
+  .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),#3fd0d0);border-radius:4px}
+
+  .lang{margin-bottom:7px}
+  .lang .ln{display:flex;justify-content:space-between;color:#e6edf4}
+  .lang .lv{color:#9fb0c1;font-size:8.5px}
+  .dotscale{display:flex;gap:3px;margin-top:3px}
+  .dotscale i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.18)}
+  .dotscale i.on{background:var(--brand)}
+
+  .side ul{list-style:none}
+  .side ul li{position:relative;padding-left:12px;margin-bottom:4px;color:#cdd8e3}
+  .side ul li::before{content:"";position:absolute;left:0;top:5px;width:5px;height:5px;border-radius:50%;background:var(--brand)}
+  .tag-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+  .tag{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);color:#dfe7ef;
+       padding:2px 7px;border-radius:20px;font-size:8.4px}
+  . int-h{color:#fff;font-weight:600;margin-top:6px}
+
+  /* ---------- MAIN ---------- */
+  .main{padding:26px 26px 26px 24px}
+  .summary{color:#37475a;line-height:1.5;text-align:justify}
+  .m-block{margin-top:16px}
+  .m-title{display:flex;align-items:center;gap:9px;color:var(--ink);font-size:12.5px;font-weight:800;
+           text-transform:uppercase;letter-spacing:1.4px;margin-bottom:10px}
+  .m-title::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--brand),transparent)}
+
+  .item{position:relative;padding-left:16px;margin-bottom:11px}
+  .item::before{content:"";position:absolute;left:0;top:3px;bottom:2px;width:2px;background:var(--line)}
+  .item::after{content:"";position:absolute;left:-3px;top:3px;width:8px;height:8px;border-radius:50%;
+               background:#fff;border:2px solid var(--brand)}
+  .it-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .it-role{font-weight:700;color:var(--ink);font-size:10.4px}
+  .it-date{color:var(--brand-d);font-weight:600;font-size:8.6px;white-space:nowrap}
+  .it-org{color:var(--muted);font-weight:600;font-size:9px;margin:1px 0 3px}
+  .item ul{list-style:none;margin-top:2px}
+  .item ul li{position:relative;padding-left:11px;color:#41505f;margin-bottom:2px;line-height:1.4}
+  .item ul li::before{content:"–";position:absolute;left:0;color:var(--brand)}
+
+  .proj{margin-bottom:8px}
+  .proj .ph{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+  .proj .pn{font-weight:700;color:var(--ink);font-size:9.8px}
+  .proj .pd{color:var(--brand-d);font-size:8.4px;font-weight:600;white-space:nowrap}
+  .proj p{color:#41505f;line-height:1.4}
+  .ptags{margin-top:2px}
+  .ptags span{display:inline-block;background:#eef6f6;color:var(--brand-d);border:1px solid #d5ebeb;
+              padding:1px 6px;border-radius:4px;font-size:8px;margin:2px 4px 0 0;font-weight:600}
+
+  @media print{
+    html,body{background:#fff}
+    .page{margin:0;box-shadow:none;width:auto;min-height:auto}
+    @page{margin:0}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="side">
+    <div class="name">Denis <b>HODZIC</b></div>
+    <div class="role">Back-End Developer</div>
+
+    <div class="s-block">
+      <div class="s-title">Contact</div>
+      <div class="contact-row"><span class="ic">✉</span><a href="mailto:denis.hodzic@etu.univ-smb.fr">denis.hodzic@etu.univ-smb.fr</a></div>
+      <div class="contact-row"><span class="ic">☎</span><span>+33 (0)6 12 22 08 26</span></div>
+      <div class="contact-row"><span class="ic">⌂</span><span>Résidence Tom Morel, 12 Chemin de Bellevue, 74940 Annecy, France</span></div>
+      <div class="contact-row"><span class="ic">in</span><a href="https://www.linkedin.com/in/denis-hodzic-25277733b/">linkedin.com/in/denis-hodzic</a></div>
+      <div class="contact-row"><span class="ic">✦</span><span>Born 14 Sept. 2004 &nbsp;·&nbsp; Montenegrin</span></div>
+      <div class="contact-row"><span class="ic">⌾</span><span>Driving licence B &amp; own vehicle</span></div>
+    </div>
+
+    <div class="s-block">
+      <div class="s-title">Technical Skills</div>
+      <div class="skill"><div class="lab"><span>C# / .NET (WPF)</span><span>Advanced</span></div><div class="bar"><i style="width:88%"></i></div></div>
+      <div class="skill"><div class="lab"><span>SQL / PostgreSQL</span><span>Advanced</span></div><div class="bar"><i style="width:85%"></i></div></div>
+      <div class="skill"><div class="lab"><span>Web — HTML / CSS / JS</span><span>Advanced</span></div><div class="bar"><i style="width:88%"></i></div></div>
+      <div class="skill"><div class="lab"><span>Python</span><span>Advanced</span></div><div class="bar"><i style="width:80%"></i></div></div>
+      <div class="skill"><div class="lab"><span>PHP / Laravel / Symfony</span><span>Intermediate</span></div><div class="bar"><i style="width:70%"></i></div></div>
+      <div class="skill"><div class="lab"><span>Linux (Debian) / Bash</span><span>Intermediate</span></div><div class="bar"><i style="width:68%"></i></div></div>
+      <div class="skill"><div class="lab"><span>UML / MERISE modeling</span><span>Intermediate</span></div><div class="bar"><i style="width:65%"></i></div></div>
+      <div class="tag-row">
+        <span class="tag">Git</span><span class="tag">VS Code</span><span class="tag">PowerBI</span>
+        <span class="tag">Pack Office</span><span class="tag">Windows</span>
+      </div>
+    </div>
+
+    <div class="s-block">
+      <div class="s-title">Languages</div>
+      <div class="lang"><div class="ln"><span>French</span><span class="lv">Native</span></div><div class="dotscale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+      <div class="lang"><div class="ln"><span>English</span><span class="lv">B2 · TOEIC 910</span></div><div class="dotscale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      <div class="lang"><div class="ln"><span>Croatian</span><span class="lv">Upper Int. (B2)</span></div><div class="dotscale"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
+      <div class="lang"><div class="ln"><span>Italian</span><span class="lv">Elementary (A2)</span></div><div class="dotscale"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div></div>
+    </div>
+
+    <div class="s-block">
+      <div class="s-title">Soft Skills</div>
+      <ul>
+        <li>Self-directed &amp; proactive</li>
+        <li>Strong time management, punctual</li>
+        <li>Reliable &amp; team-minded</li>
+        <li>Adaptable &amp; self-sufficient</li>
+        <li>Precise &amp; analytical</li>
+      </ul>
+    </div>
+
+    <div class="s-block">
+      <div class="s-title">Interests</div>
+      <div class="int-h">Sport</div>
+      <ul><li>Badminton — once a week</li><li>Weight training — four times a week</li></ul>
+      <div class="int-h">Motorsport</div>
+      <ul><li>Formula 1 &amp; Rally (strategy &amp; data)</li></ul>
+      <div class="int-h">Culture &amp; Gaming</div>
+      <ul><li>Reading — manga &amp; webtoons</li><li>Tactical games — The Finals, Ready or Not</li></ul>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+    <p class="summary">
+      Third-year student in a Bachelor of Technology in Computer Science (<b>BUT Informatique</b>),
+      specialized in Software Development, with proven skills in application design, web development and
+      database management. Fresh from a back-end internship migrating legacy PHP to Symfony, I am seeking a
+      final-year internship as a Software Developer to consolidate my technical expertise and contribute to
+      innovative projects within a dynamic team.
+    </p>
+
+    <section class="m-block">
+      <div class="m-title">Work Experience</div>
+
+      <div class="item">
+        <div class="it-head"><span class="it-role">Assembly Agent — Summer Job</span><span class="it-date">July 2026 · 20 days</span></div>
+        <div class="it-org">SOMFY (home automation &amp; motorization, 6,500+ employees) — Cluses, France</div>
+        <ul>
+          <li>Assembled and fitted components according to production instructions.</li>
+          <li>Checked part conformity and quality with hand tools, following safety procedures.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="it-head"><span class="it-role">Back-End Developer — Internship</span><span class="it-date">Apr. – Jun. 2026 · 66 days</span></div>
+        <div class="it-org">Hunimalis (pet-care SaaS start-up) — Annecy, France</div>
+        <ul>
+          <li>Migrated existing PHP features to the Symfony framework and developed new back-end functionalities.</li>
+          <li>Delivered multi-practitioner management, ticket tagging, email notifications and service supplements.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="it-head"><span class="it-role">Cashier — Part-time (permanent contract)</span><span class="it-date">Feb. – Jul. 2026 · 6 months</span></div>
+        <div class="it-org">Intermarché (large-scale food retail) — Annecy-le-Vieux, France</div>
+        <ul>
+          <li>Operated the cash register and handled customer payments accurately during high-traffic periods.</li>
+          <li>Welcomed and advised customers, combining the role with my studies and internship.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="it-head"><span class="it-role">Production Operator — Summer Job</span><span class="it-date">July 2025</span></div>
+        <div class="it-org">CREA (agrochemicals, 50–70 employees) — Bonneville, France</div>
+        <ul>
+          <li>Assisted in production and logistics: packaging, labeling and preparing shipments.</li>
+          <li>Maintained workflow efficiency while respecting strict delivery deadlines.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="it-head"><span class="it-role">Order Picker — Summer Job</span><span class="it-date">Jun. – Jul. 2025 · 2 weeks</span></div>
+        <div class="it-org">VELSOL-FRANCE (textile products for roofing windows, 50–99 employees) — Reignier, France</div>
+        <ul>
+          <li>Prepared orders according to delivery slips.</li>
+          <li>Applied safety instructions to ensure smooth warehouse operations.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="it-head"><span class="it-role">Handler</span><span class="it-date">Apr. 2025 · 2 days</span></div>
+        <div class="it-org">ACR SARL (renovation &amp; carpentry, 10–20 employees) — Morzine, France</div>
+        <ul>
+          <li>Performed handling tasks in support of logistics operations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="m-block">
+      <div class="m-title">Education</div>
+
+      <div class="item">
+        <div class="it-head"><span class="it-role">BUT Informatique — Bachelor of Technology in Computer Science</span><span class="it-date">Sept. 2024 – Present</span></div>
+        <div class="it-org">University of Savoie Mont Blanc, IUT Annecy — Annecy-le-Vieux, France</div>
+        <ul><li>Specialization: Software Development (application design, back-end, databases, system administration).</li></ul>
+      </div>
+
+      <div class="item">
+        <div class="it-head"><span class="it-role">Baccalauréat STI2D — French science &amp; technology high-school diploma</span><span class="it-date">2021 – 2023</span></div>
+        <div class="it-org">Lycée Charles Poncet — Cluses, France</div>
+        <ul><li>Option: Information Systems &amp; Digital Technologies. Graduated with honors.</li></ul>
+      </div>
+    </section>
+
+    <section class="m-block">
+      <div class="m-title">Academic Projects</div>
+
+      <div class="proj">
+        <div class="ph"><span class="pn">Full-Stack Application Development</span><span class="pd">Team project</span></div>
+        <p>Complete applications in C# and Python with WPF graphical interfaces and data-processing algorithms.</p>
+        <div class="ptags"><span>C#</span><span>Python</span><span>WPF</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><span class="pn">Interactive Web Game</span><span class="pd">Autumn 2025</span></div>
+        <p>Browser game built with Phaser 3; asynchronous data exchange (Axios) with a PHP/SQL back-end.</p>
+        <div class="ptags"><span>JavaScript</span><span>Phaser 3</span><span>PHP / SQL</span><span>Axios</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><span class="pn">LOXAM — Rental Management Application</span><span class="pd">Spring 2025</span></div>
+        <p>C# / WPF desktop app with a layered architecture and business classes over a PostgreSQL database.</p>
+        <div class="ptags"><span>C# / WPF</span><span>PostgreSQL</span><span>Architecture</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><span class="pn">Network &amp; System Administration</span><span class="pd">Team project</span></div>
+        <p>Installation and configuration of Apache/Nginx, DHCP and DNS services on Linux (Debian).</p>
+        <div class="ptags"><span>Linux</span><span>Apache / Nginx</span><span>DHCP / DNS</span></div>
+      </div>
+    </section>
+
+    <section class="m-block">
+      <div class="m-title">References</div>
+      <div class="item" style="padding-left:16px">
+        <div class="it-head"><span class="it-role">Luc DAMAS</span></div>
+        <div class="it-org">Computer Science Lecturer, IUT Annecy — l.damas@univ-smb.fr</div>
+      </div>
+      <div class="item" style="padding-left:16px">
+        <div class="it-head"><span class="it-role">Pascal COLIN</span></div>
+        <div class="it-org">Database &amp; Computer Science Professor, IUT Annecy — pascal.colin@univ-savoie.fr</div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

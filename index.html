@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio – Denis Hodzic</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="bg-orbit"></div>
+  <div class="bg-orbit bg-orbit-2"></div>
+
+  <header class="site-header">
+    <nav class="navbar container">
+      <div class="logo">Denis <span>H.</span></div>
+
+      <input id="menu-toggle" type="checkbox" aria-label="Open menu">
+      <label class="burger" for="menu-toggle" aria-hidden="true">
+        <span></span>
+      </label>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#internship">Internship</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#timeline">Background</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero container">
+      <div class="hero-left reveal up">
+        <p class="hero-kicker">Computer Science Student • IUT of Annecy</p>
+        <h1>Creating software that feels effortless.</h1>
+        <p class="hero-sub">
+          I design reliable, structured and maintainable digital experiences, with a focus on backend development, data handling and clean architecture.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View my projects</a>
+          <a href="Cv/CV_Denis_Hodzic.pdf?v=4" target="_blank" class="btn ghost">
+            My resume
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal up">
+        <div class="hero-card glass">
+          <img src="Img/Photo_Profil.png" alt="Photo of Denis" class="hero-avatar">
+          <div class="hero-badges">
+            <span>BUT Informatique</span>
+            <span>Backend & data</span>
+            <span>Symfony / Laravel</span>
+          </div>
+          <div class="hero-card-body">
+            <div class="hero-contact">
+              <p class="hero-contact-name">Denis Hodzic</p>
+              <p class="hero-contact-sub">BUT Informatique – IUT d'Annecy</p>
+
+              <div class="hero-contact-line">
+                <span>✉</span>
+                <a href="mailto:denis.hodzic@etu.univ-smb.fr">denis.hodzic@etu.univ-smb.fr</a>
+              </div>
+
+              <div class="hero-contact-line">
+                <span>📞</span>
+                <a href="tel:+33612220826">+33 6 12 22 08 26</a>
+              </div>
+
+              <div class="hero-contact-line">
+                <span>📍</span>
+                Annecy, Haute-Savoie, France
+              </div>
+
+              <div class="hero-contact-line">
+                <span>🔗</span>
+                <a href="https://www.linkedin.com/in/denis-hodzic-25277733b/" target="_blank">
+                  LinkedIn profile
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="section container">
+      <h2 class="section-title reveal up">About</h2>
+      <div class="about-grid">
+        <div class="about-text glass reveal left">
+          <p>
+            I’m a third-year student in <strong>BUT Informatique</strong> (Bachelor of Technology in Computer Science) at the University of Savoie Mont Blanc (Annecy). My focus is on application development, backend systems, and database management.
+          </p>
+          <p>
+            I recently completed a back-end internship at <strong>Hunimalis</strong>, migrating legacy PHP features to <strong>Symfony</strong> and shipping new functionality for a real SaaS product. I am rigorous and organized, with a strong interest in algorithmic efficiency and clean software architecture — whether on a team project or in a professional codebase.
+          </p>
+        </div>
+        <div class="about-metrics reveal right">
+          <div class="metric glass">
+            <span class="metric-number">3+</span>
+            <span class="metric-label">Years of IT studies</span>
+          </div>
+          <div class="metric glass">
+            <span class="metric-number">7</span>
+            <span class="metric-label">Professional experiences</span>
+          </div>
+          <div class="metric glass">
+            <span class="metric-number">4</span>
+            <span class="metric-label">Languages spoken</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="objective" class="section container">
+      <div class="objective-box glass reveal up">
+        <div class="obj-content">
+          <div class="status-badge">
+            <span class="pulsing-dot"></span>
+            <span>Open to opportunities</span>
+          </div>
+          <h2>Searching for a Junior Developer role <br><span class="text-gradient">or final-year Internship</span></h2>
+          <p>
+            Fresh off a back-end internship at Hunimalis, I'm looking to join a professional team to keep solving real-world technical challenges, applying my skills in <strong>PHP / Symfony</strong>, <strong>C# .NET</strong>, and <strong>Modern Web Development</strong>.
+          </p>
+        </div>
+        <div class="obj-visual">
+          <div class="target-icon">🎯</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="internship" class="section container">
+      <h2 class="section-title reveal up">Featured Experience</h2>
+      <div class="internship-card glass reveal up">
+        <div class="intern-side">
+          <div class="hunimalis-chip">
+            <img src="Img/Hunimalis_Logo.png" alt="Hunimalis logo">
+          </div>
+          <span class="intern-dates">Apr – Jun 2026 · 66 days</span>
+          <a href="https://www.hunimalis.com" target="_blank" class="intern-web">hunimalis.com ↗</a>
+        </div>
+        <div class="intern-main">
+          <span class="intern-kicker">Back-End Internship</span>
+          <h3>Back-End Developer <span>· Hunimalis</span></h3>
+          <p class="intern-tagline">All-in-one SaaS platform for groomers, veterinarians and pet-care professionals — Annecy, France.</p>
+          <ul class="intern-points">
+            <li>Migrated existing <strong>PHP</strong> features to the <strong>Symfony</strong> framework inside a live production codebase.</li>
+            <li>Developed new back-end functionalities: multi-practitioner management, ticket tagging, email notifications and service supplements.</li>
+            <li>Collaborated with the product team, applying clean and maintainable architecture practices.</li>
+          </ul>
+          <div class="intern-stack">
+            <span>PHP</span><span>Symfony</span><span>PostgreSQL</span><span>Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2 class="section-title reveal up">Technical Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill glass reveal up">
+          <h3>Programming Languages</h3>
+          <div class="skill-bar-container">
+            <div class="skill-info"><span>C# / .NET (WPF)</span><span>Advanced</span></div>
+            <div class="progress-bar"><div class="fill" style="width: 85%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info"><span>Python (Graph theory, Scripting)</span><span>Advanced</span></div>
+            <div class="progress-bar"><div class="fill" style="width: 80%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info"><span>SQL (PostgreSQL, Modeling)</span><span>Advanced</span></div>
+            <div class="progress-bar"><div class="fill" style="width: 85%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info"><span>PHP / Laravel / Symfony</span><span>Intermediate</span></div>
+            <div class="progress-bar"><div class="fill" style="width: 70%"></div></div>
+          </div>
+        </div>
+
+        <div class="skill glass reveal up">
+          <h3>Tools & Environments</h3>
+          <div class="skill-bar-container">
+            <div class="skill-info"><span>HTML5 / CSS3 / JS</span><span>Advanced</span></div>
+            <div class="progress-bar"><div class="fill" style="width: 90%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info"><span>Git / VS Code</span><span>Advanced</span></div>
+            <div class="progress-bar"><div class="fill" style="width: 80%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info"><span>Linux (Debian, Apache/Nginx)</span><span>Intermediate</span></div>
+            <div class="progress-bar"><div class="fill" style="width: 70%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info"><span>UML / MERISE Modeling</span><span>Intermediate</span></div>
+            <div class="progress-bar"><div class="fill" style="width: 65%"></div></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="profile" class="section container">
+      <div class="profile-grid-modern">
+
+        <div class="profile-col">
+          <h2 class="section-title align-left reveal up">Languages</h2>
+          <div class="language-card glass reveal left">
+            <div class="lang-item">
+              <div class="lang-header">
+                <span class="lang-flag">🇫🇷</span>
+                <span class="lang-name">French</span>
+                <span class="lang-level">Native</span>
+              </div>
+              <div class="lang-bar">
+                <div class="lang-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-header">
+                <span class="lang-flag">🇬🇧</span>
+                <span class="lang-name">English</span>
+                <span class="lang-level" style="color: var(--brand-strong);">B2 – TOEIC 910/990</span>
+              </div>
+              <div class="lang-bar">
+                <div class="lang-fill" style="width: 85%;"></div>
+              </div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-header">
+                <span class="lang-flag">🇭🇷</span>
+                <span class="lang-name">Croatian</span>
+                <span class="lang-level">B2 (Upper-Int)</span>
+              </div>
+              <div class="lang-bar">
+                <div class="lang-fill" style="width: 75%;"></div>
+              </div>
+            </div>
+            <div class="lang-item">
+              <div class="lang-header">
+                <span class="lang-flag">🇮🇹</span>
+                <span class="lang-name">Italian</span>
+                <span class="lang-level">A2 (Elementary)</span>
+              </div>
+              <div class="lang-bar">
+                <div class="lang-fill" style="width: 30%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-col">
+          <h2 class="section-title align-left reveal up">Soft Skills</h2>
+          <div class="soft-skills-grid">
+            <div class="soft-card glass reveal right">
+              <div class="soft-icon">🤝</div>
+              <h3>Reliable</h3>
+              <p>Proven consistency through an internship, summer jobs & production work.</p>
+            </div>
+            <div class="soft-card glass reveal right" style="transition-delay: 0.1s;">
+              <div class="soft-icon">🚀</div>
+              <h3>Self-directed</h3>
+              <p>Took initiative migrating legacy code to Symfony during my internship.</p>
+            </div>
+            <div class="soft-card glass reveal right" style="transition-delay: 0.2s;">
+              <div class="soft-icon">💬</div>
+              <h3>Communication</h3>
+              <p>Client reception and customer advising experience.</p>
+            </div>
+            <div class="soft-card glass reveal right" style="transition-delay: 0.3s;">
+              <div class="soft-icon">📅</div>
+              <h3>Organized</h3>
+              <p>Precise and analytical, with efficient time management.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="timeline" class="section container">
+      <h2 class="section-title reveal up">Education & Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="date">July 2026 · 20 days</span>
+            <h3>Assembly Agent (Summer Job)</h3>
+            <p class="subtitle">SOMFY – Cluses, France</p>
+            <p class="desc">Assembled and fitted components per production instructions. Checked part conformity and quality using hand tools, following safety procedures.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="date">April – June 2026 · 66 days</span>
+            <h3>Back-end Developer (Internship)</h3>
+            <p class="subtitle">Hunimalis – Annecy, France</p>
+            <p class="desc">Migrated existing PHP features to Symfony and developed new back-end functionalities: multi-practitioner management, ticket tagging, email notifications, service supplements.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="date">Feb 2026 – July 2026 · 6 months</span>
+            <h3>Cashier (Part-time)</h3>
+            <p class="subtitle">Intermarché – Annecy-le-Vieux, France</p>
+            <p class="desc">Cash register operation and customer payments in a busy supermarket, held part-time (permanent contract) alongside my studies and internship. Customer service and checkout accuracy.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="date">June 2025 – July 2025</span>
+            <h3>Order Picker (Summer Job)</h3>
+            <p class="subtitle">VELSOL-FRANCE – Reignier, France</p>
+            <p class="desc">Prepared orders according to slips. Developed autonomy and efficiency in logistics.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="date">July 2025</span>
+            <h3>Production Operator</h3>
+            <p class="subtitle">CREA – Bonneville, France</p>
+            <p class="desc">Packaging and logistics preparation for shipping. Team coordination on the production line.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="date">April 2025 · 2 days</span>
+            <h3>Handler</h3>
+            <p class="subtitle">ACR SARL – Morzine, France</p>
+            <p class="desc">Handling tasks in support of logistics operations at a renovation & carpentry company.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="date">Sept 2024 – Present</span>
+            <h3>BUT Informatique (3rd Year)</h3>
+            <p class="subtitle">University of Savoie Mont Blanc – Annecy, France</p>
+            <p class="desc">Pathway: Software Development. Projects: Web apps, SaaS platform (Symfony), graph theory, system administration.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="date">2021 – 2023</span>
+            <h3>Baccalauréat STI2D</h3>
+            <p class="subtitle">Lycée Charles Poncet – Cluses, France</p>
+            <p class="desc">Specialty in Information Systems & Digital (SIN). Graduated with Honors (Mention Assez Bien).</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="date">July 2023 – August 2023</span>
+            <h3>Versatile Employee</h3>
+            <p class="subtitle">King Of GSM – Cluses, France</p>
+            <p class="desc">Inventory management, client reception, and advising customers. Improved professional communication skills.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2 class="section-title reveal up">Academic Projects</h2>
+
+      <div class="filter-container reveal up">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="csharp">C# / .NET</button>
+        <button class="filter-btn" data-filter="web">Web / JS</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card glass reveal up" data-category="web">
+          <div class="project-img-wrapper">
+             <img src="Img/Main_Screen_Hunimalis.png" alt="Hunimalis Platform" loading="lazy">
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="meta-date">Autumn 2025</span> • <span class="meta-type">Team Project</span>
+            </div>
+            <h3>Hunimalis (SaaS Platform)</h3>
+            <p>Full-stack development of a comprehensive SaaS solution for pet professionals (groomers, vets). Features include CRM, appointment scheduling, invoicing, stock management, and an AI-powered assistant. This project led directly to a back-end internship at the company built around it.</p>
+            <div class="project-tags">
+              <span>Laravel</span><span>PHP/SQL</span><span>SaaS</span><span>AI Chatbot</span>
+            </div>
+            <a href="#" class="project-link open-modal-btn" data-project="hunimalis">View details &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal up" data-category="csharp">
+          <div class="project-img-wrapper">
+             <img src="Img/Loxam.png" alt="LOXAM C# Application" loading="lazy">
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="meta-date">Spring 2025</span> • <span class="meta-type">Team Project</span>
+            </div>
+            <h3>LOXAM Application (Rental Management)</h3>
+            <p>Development of a C# (WPF) desktop application for equipment rental management. Features a layered architecture, business classes, and SQL data persistence.</p>
+            <div class="project-tags">
+              <span>C# / WPF</span><span>SQL</span><span>.Net</span>
+            </div>
+            <a href="https://github.com/0REDGAR0/SAE2.01_Loxam" class="project-link" target="_blank">View code &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal up" data-category="web">
+          <div class="project-img-wrapper">
+             <img src="Img/phaser_game_placeholder.png" alt="Phaser 3 Web Game" loading="lazy">
+          </div>
+          <div class="project-content">
+             <div class="project-meta">
+              <span class="meta-date">Autumn 2025</span> • <span class="meta-type">Team Project</span>
+            </div>
+            <h3>Interactive Web Game (Phaser 3)</h3>
+            <p>Development of a browser-based game using Phaser 3 engine. Implementation of game logic, animations, and asynchronous communication (Axios) with a PHP/SQL database.</p>
+            <div class="project-tags">
+              <span>JavaScript</span><span>Phaser 3</span><span>Axios/API</span>
+            </div>
+            <a href="https://jeu-r3-05.alwaysdata.net/" class="project-link" target="_blank">View project &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal up" data-category="csharp">
+          <div class="project-img-wrapper">
+             <img src="Img/Angry_SnowMan.png" alt="Angry Snowman Game" loading="lazy">
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="meta-date">Winter 2024</span> • <span class="meta-type">Pair Programming</span>
+            </div>
+            <h3>Angry Snowman (WPF Game)</h3>
+            <p>Development of a 2D physics-based game inspired by Angry Birds using C# and WPF. Implementation of a custom game loop, collision detection, and Object-Oriented patterns.</p>
+            <div class="project-tags">
+              <span>C# / WPF</span><span>Game Physics</span><span>OOP</span>
+            </div>
+            <a href="https://github.com/mael-guimoyas/ANGRYSNOWMAN2" class="project-link" target="_blank">View Code &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal up" data-category="web">
+          <div class="project-img-wrapper">
+             <img src="Img/portfolio_placeholder.png" alt="This Portfolio Website" loading="lazy">
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="meta-date">2026</span> • <span class="meta-type">Individual Project</span>
+            </div>
+            <h3>Personal Portfolio</h3>
+            <p>Design and development of this responsive portfolio website. Built with semantic HTML5, modern CSS3 (Glassmorphism), and JavaScript to showcase my skills.</p>
+            <div class="project-tags">
+              <span>HTML5</span><span>CSS3</span><span>Responsive</span>
+            </div>
+            <a href="#" class="project-link">You are here &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="interests" class="section container">
+      <h2 class="section-title reveal up">Interests & Passions</h2>
+      <div class="interests-grid-modern">
+
+        <div class="interest-item glass reveal up">
+          <div class="interest-icon">🏸</div>
+          <h3>Sports & Discipline</h3>
+          <p><strong>Badminton</strong> & <strong>Weight training</strong> (4x/week).</p>
+          <span class="interest-tag">Perseverance</span>
+        </div>
+
+        <div class="interest-item glass reveal up">
+          <div class="interest-icon">🏎️</div>
+          <h3>Motorsport</h3>
+          <p>Passionate about <strong>F1</strong> & <strong>Rally</strong> strategies.</p>
+          <span class="interest-tag">Tech & Data</span>
+        </div>
+
+        <div class="interest-item glass reveal up">
+          <div class="interest-icon">🎮</div>
+          <h3>Tactical Gaming</h3>
+          <p><em>The Finals</em>, <em>Ready Or Not</em>.</p>
+          <span class="interest-tag">Team Coordination</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="references" class="section container">
+      <h2 class="section-title reveal up">References</h2>
+      <div class="reference-grid-modern">
+
+        <article class="ref-card glass reveal up">
+          <div class="quote-icon">❝</div>
+          <p class="ref-role">Computer Science Lecturer @ IUT Annecy</p>
+          <h3>Luc DAMAS</h3>
+          <p class="ref-contact">
+            <a href="mailto:l.damas@univ-smb.fr">l.damas@univ-smb.fr</a>
+          </p>
+          <div class="ref-decoration"></div>
+        </article>
+
+        <article class="ref-card glass reveal up">
+          <div class="quote-icon">❝</div>
+          <p class="ref-role">Database & Computer Science Professor @ IUT Annecy</p>
+          <h3>Pascal COLIN</h3>
+          <p class="ref-contact">
+            <a href="mailto:pascal.colin@univ-savoie.fr">pascal.colin@univ-savoie.fr</a>
+          </p>
+          <div class="ref-decoration"></div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2 class="section-title reveal up">Contact</h2>
+
+      <!--<div class="cv-cta glass reveal up">
+        <div class="cv-cta-text">
+          <h3>My Resume</h3>
+          <p>Full CV in PDF — skills, experience, education and references on a single page.</p>
+        </div>
+        <a href="Cv/CV_Denis_Hodzic.pdf?v=4" download class="btn primary">⬇&nbsp; Download CV (PDF)</a>
+      </div>-->
+
+      <form id="contact-form" class="contact-form glass reveal up" method="post">
+        <input type="hidden" name="access_key" value="58a987c7-940c-4763-82cc-0924e68d9e77">
+
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+
+        <button type="submit" class="btn primary full">Send</button>
+      </form>
+      <p id="form-status" class="form-status"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© 2026 Denis Hodzic – IUT of Annecy</p>
+      <button id="scrollTopBtn" aria-label="Back to top">↑</button>
+    </div>
+  </footer>
+
+  <!-- Modal for project details -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content glass">
+      <span class="close-modal">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <div id="modalTags" class="project-tags"></div>
+      <p id="modalDesc"></p>
+      <div id="modalGallery" class="modal-gallery"></div>
+    </div>
+  </div>
+
+  <script src="axios_min.js"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
